@@ -1,0 +1,28 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: folder1
+  description: ''
+  displayName: folder1
+  items:
+  - kind: freeStyle
+    name: job1
+    blockBuildWhenDownstreamBuilding: false
+    blockBuildWhenUpstreamBuilding: false
+    builders:
+    - shell:
+        command: echo "Hello world!"
+    concurrentBuild: false
+    description: ''
+    disabled: false
+    displayName: job1
+    scm:
+      none: {}
+    scmCheckoutStrategy:
+      standard: {}
+  properties:
+  - envVars: {}
+  - itemRestrictions:
+      filter: false

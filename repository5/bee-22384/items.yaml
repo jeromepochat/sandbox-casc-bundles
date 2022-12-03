@@ -1,0 +1,35 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: pipeline
+  name: pipeline1
+  concurrentBuild: true
+  definition:
+    cpsFlowDefinition:
+      sandbox: true
+      script: |
+        pipeline {
+            agent any
+
+            stages {
+                stage('Hello') {
+                    steps {
+                        echo 'Hello World'
+                    }
+                }
+            }
+        }
+  description: ''
+  disabled: false
+  displayName: pipeline1
+  properties:
+  - parameters:
+      parameterDefinitions:
+      - choice:
+          name: color
+          choices:
+          - red
+          - green
+          - blue
+  resumeBlocked: false

@@ -1,0 +1,36 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: "multibranch"
+  displayName: "jenkins-plugin-pom"
+  projectFactory:
+    workflowBranchProjectFactory:
+      scriptPath: "Jenkinsfile"
+  name: multibranch
+  description: Parent POM for Jenkins Plugins
+  sourcesList:
+  - branchSource:
+      source:
+        github:
+          traits:
+          - gitHubBranchDiscovery:
+              strategyId: 1
+          - gitHubPullRequestDiscovery:
+              strategyId: 1
+          - gitHubForkDiscovery:
+              trust:
+                gitHubTrustPermissions: {}
+              strategyId: 1
+          repoOwner: "jenkinsci"
+          id: "9eb78d98-eac1-4450-b318-a1ef794e251e"
+          repository: "plugin-pom"
+          configuredByUrl: true
+          repositoryUrl: "https://github.com/jenkinsci/plugin-pom"
+      strategy:
+        allBranchesSame: {}
+  orphanedItemStrategy:
+    defaultOrphanedItemStrategy:
+      pruneDeadBranches: true
+      daysToKeep: 2
+      numToKeep: 5

@@ -1,0 +1,22 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+
+items:
+  - kind: "freeStyle"
+    name: "freeStyle-test"
+    displayName: "Testing FreeStyle"
+    description: "FreeStyleProject for testing purpose!"
+    concurrentBuild: true
+    blockBuildWhenDownstreamBuilding: true
+    blockBuildWhenUpstreamBuilding: false
+    buildDiscarder:
+      logRotator:
+        artifactDaysToKeep: 3
+        daysToKeep: 1
+        numToKeep: 2
+        artifactNumToKeep: 4
+    builders:
+      - shell:
+          command: "pwd"
+    label: "testing-label"

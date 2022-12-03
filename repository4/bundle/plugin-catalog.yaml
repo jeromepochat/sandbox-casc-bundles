@@ -1,0 +1,9 @@
+type: plugin-catalog
+version: '1'
+name: pulsar-catalog
+displayName: Simple catalog
+configurations:
+- description: Exported plugins
+  includePlugins:
+    cloudbees-request-filter: 
+      version: '1.7'

@@ -1,0 +1,22 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+
+items:
+  - kind: "pipeline"
+    name: "pipeline-minimum"
+    definition:
+      cpsFlowDefinition:
+        sandbox: true
+        script: |
+          pipeline {
+              agent any
+
+              stages {
+                  stage('Hello') {
+                      steps {
+                          echo 'Hello World'
+                      }
+                  }
+              }
+          }

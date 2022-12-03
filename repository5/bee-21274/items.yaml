@@ -1,0 +1,23 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: freeStyle
+  name: freestyle1
+  blockBuildWhenDownstreamBuilding: false
+  blockBuildWhenUpstreamBuilding: false
+  concurrentBuild: false
+  description: ''
+  disabled: false
+  displayName: freestyle1
+  parameters:
+  - choice:
+      name: color
+      choices:
+      - red
+      - green
+      - blue
+  scm:
+    none: {}
+  scmCheckoutStrategy:
+    standard: {}

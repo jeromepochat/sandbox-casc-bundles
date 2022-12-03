@@ -1,0 +1,5 @@
+plugins:
+  - id: "cloudbees-request-filter"
+  - id: "workflow-multibranch"
+  - id: "cloudbees-github-reporting"
+  - id: "cloudbees-workflow-template"

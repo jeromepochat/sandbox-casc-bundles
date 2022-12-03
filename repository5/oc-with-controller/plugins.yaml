@@ -1,0 +1,8 @@
+plugins:
+  - id: "cloudbees-casc-api"
+  - id: "cloudbees-casc-items-server"
+  - id: "nectar-rbac"
+  - id: "operations-center-rbac"
+  - id: "operations-center-monitoring"
+  - id: "operations-center-updatecenter"
+  - id: "operations-center-sso"

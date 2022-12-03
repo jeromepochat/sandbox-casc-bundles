@@ -1,0 +1,9 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+
+items:
+  - kind: "folder"
+    displayName: "Empty folder"
+    name: "empty-folder"
+    description: "An empty simple Folder"
