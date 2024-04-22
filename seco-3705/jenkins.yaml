@@ -1,0 +1,4 @@
+jenkins:
+  proxy:
+   name: "linux-jpochat"
+   port: 3128
