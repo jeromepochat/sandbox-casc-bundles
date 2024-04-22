@@ -1,4 +1,5 @@
 jenkins:
+  systemMessage: "Configured with CasC"
 #  proxy:
 #   name: "linux-jpochat"
 #   port: 3128
