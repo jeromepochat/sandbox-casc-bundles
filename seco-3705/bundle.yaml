@@ -4,5 +4,5 @@ description: "seco-3705c"
 version: "1"
 plugins:
   - "plugins.yaml"
-jcasc:
-  - "jenkins.yaml"
+# jcasc:
+#   - "jenkins.yaml"
