@@ -3,4 +3,4 @@ jenkins:
   proxy:
    name: "linux-jpochat"
    port: 3128
-   noProxyHost: "*.svc.cluster.local"
+   #noProxyHost: "*.svc.cluster.local"
