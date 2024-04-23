@@ -1,6 +1,6 @@
 jenkins:
   systemMessage: "Configured with CasC"
   proxy:
-   name: "10.244.0.53"
+   name: "10.244.0.11"
    port: 3128
    #noProxyHost: "*.svc.cluster.local"
