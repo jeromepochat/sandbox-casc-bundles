@@ -1,0 +1,73 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+
+items:
+  - kind: "clientController"
+    displayName: "ATH Client controller"
+    name: "cc-casc"
+    description: "Client Controller created using CasC"
+    properties:
+      - healthReporting:
+          enabled: false
+      - owner:
+          delay: 42
+          owners: pulsar
+      - configurationAsCode:
+          bundle: my-bundle
+      - webSocket:
+          enabled: true
+      - sharedConfigurationOptOut:
+          optOut: true
+      - enforceControllerExecutors:
+          count: 42
+      - updateCenter:
+          source:
+            jenkinsEnterpriseUpdateSource:
+              verifySignature: false
+              baseUrl: http://jenkins-updates.cloudbees.com/update-center.json
+              maxCacheAge: 42
+              toolInstallerNames:
+                - biz.neustar.jenkins.plugins.packer.PackerInstaller
+                - com.cloudbees.plugins.cloudfoundry.cli.CloudFoundryCliInstaller
+                - com.cloudbees.plugins.openshift.OpenShiftClientInstaller
+                - com.g2one.hudson.grails.GrailsInstaller
+                - com.inneractive.jenkins.plugins.consul.ConsulInstaller
+                - hudson.plugins.buckminster.BuckminsterInstallation.BuckminsterInstaller
+                - hudson.plugins.cmake.CmakeInstaller
+                - hudson.plugins.flyway.FlywayInstaller
+                - hudson.plugins.gradle.GradleInstaller
+                - hudson.plugins.groovy.GroovyInstaller
+                - hudson.plugins.nodejs.tools.NodeJSInstaller
+                - hudson.plugins.play.PlayInstaller
+                - hudson.plugins.scala.ScalaInstaller
+                - hudson.plugins.sonar.MsBuildSonarQubeRunnerInstaller
+                - hudson.plugins.sonar.SonarRunnerInstaller
+                - hudson.tasks.Ant.AntInstaller
+                - hudson.tasks.Maven.MavenInstaller
+                - hudson.tools.JDKInstaller
+                - io.jenkins.plugins.adoptopenjdk.AdoptOpenJDKInstaller
+                - io.jenkins.plugins.codeql.CodeQLInstaller
+                - io.jenkins.plugins.dotnet.data.Downloads
+                - io.jenkins.plugins.dotnet.data.Framework
+                - io.jenkins.plugins.dotnet.data.Runtime
+                - org.jenkins-ci.plugins.chromedriver.ChromeDriver
+                - org.jenkins-ci.plugins.leiningen.LeinInstaller
+                - org.jenkinsci.plugins.DependencyCheck.tools.DependencyCheckInstaller
+                - org.jenkinsci.plugins.golang.GolangInstaller
+                - org.jenkinsci.plugins.mongodb.MongoDBInstaller
+                - org.jenkinsci.plugins.perlinstaller.PerlInstaller
+                - org.jenkinsci.plugins.recipe.RecipeCatalog
+                - org.jenkinsci.plugins.scriptler.CentralScriptJsonCatalog
+                - org.jenkinsci.plugins.terraform.TerraformInstaller
+                - org.jvnet.hudson.plugins.SbtPluginBuilder.SbtInstaller
+                - org.sbuild.jenkins.plugin.SBuildInstaller
+                - ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstaller
+                - sp.sd.flywayrunner.installation.FlywayInstaller
+              jenkinsVersion: 2.289.3.2
+      - envelopeExtension:
+          allowExceptions: true
+          extensionName: beekeeperExceptions
+      - optOutProperty:
+          securityEnforcerOptOutMode:
+            authorizationOptOutMode: { }
