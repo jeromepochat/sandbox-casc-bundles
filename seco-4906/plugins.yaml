@@ -1,0 +1,4 @@
+plugins:
+- id: ldap
+- id: cloudbees-casc-items-controller
+- id: cloudbees-casc-client

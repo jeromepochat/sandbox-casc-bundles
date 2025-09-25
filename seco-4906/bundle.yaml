@@ -1,0 +1,10 @@
+apiVersion: "1"
+id: "SECO-4906"
+description: "SECO-4906"
+version: "1"
+jcasc:
+  - "jenkins.yaml"
+plugins:
+  - "plugins.yaml"
+rbac:
+  - "rbac.yaml"

@@ -1,0 +1,7 @@
+jenkins:
+  authorizationStrategy: "cloudBeesRoleBasedAccessControl"
+  securityRealm:
+    ldap:
+      configurations:
+      - rootDN: "dc=example,dc=org"
+        server: "ldap://localhost:1389"
